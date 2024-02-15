@@ -90,10 +90,15 @@ namespace CollectionsMasterConsoleUI
             bool isNum;
             do
             {
+                //do while loop will print out the console line below once
+                //then the int.TryParse will take in a user input
+                //the while(__) will check if it's not an integer and will repeat until int is entered
                 Console.WriteLine("What number will you search for in the number list?");
                 isNum = int.TryParse(Console.ReadLine(), out userSearchNumber);
                 //NumberChecker(numberList, userSearchNumber);
             } while (isNum == false);
+            //if the user input passes as an interger the value will be passed into userSearchNumber
+            //and NumberChecker() will take in two arguments the list and the user input
             NumberChecker(numberList, userSearchNumber);
 
             Console.WriteLine("-------------------");
